@@ -3,6 +3,8 @@ markdown: kramdown
 url: "https://kevinmin95.github.io"
 plugins:
   - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 permalink: /blog/:year/:month/:day/:title
 collections:
