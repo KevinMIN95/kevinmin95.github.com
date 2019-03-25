@@ -3,4 +3,4 @@
 - name : CV
   link : /cv/
 - name : Blog
-  link : /blog/
+  link : /blog/:year/:month/:day/:title
