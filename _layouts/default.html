@@ -10,15 +10,17 @@
     {% seo %}
 	</head>
 	<body>
-		{% include navigation.html %}
-		<div class="container">
+		<div id="page-container">
+			{% include navigation.html %}
+			<div id="container">
       {{ content }}
-		</div><!-- /.container -->
-		<footer>
-			<ul>
+			</div><!-- /.container -->
+			<footer id="footer">
+				<ul>
         		<li><a href="mailto:alsehdcks95@kaist.ac.kr">email</a></li>
         		<li><a href="https://github.com/KevinMIN95/kevinmin95.github.com">github.com/kevinmin95</a></li>
-			</ul>
-		</footer>
+				</ul>
+			</footer>
+		</div>
 	</body>
 </html>
