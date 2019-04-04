@@ -35,7 +35,7 @@ p {
     color: #333;
 }
 .blurb{
-  background-image: url('{{ site.url }}/assets/images/background.jpg')
+  background-image: url('/assets/images/background.jpg')
 }
 #page-container {
   position: relative;
