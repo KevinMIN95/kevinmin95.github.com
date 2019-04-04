@@ -35,6 +35,12 @@ p {
   position: relative;
   min-height: 100vh;
 }
+#header {
+  color:black;
+  a:hover{
+    text-decoration: none;
+  }
+}
 #container {
   padding-bottom: 2.5rem;    /* Footer height */
 }
