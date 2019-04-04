@@ -49,6 +49,9 @@ p {
 #container {
   height:-webkit-fill-available;
   padding-bottom: 3rem;    /* Footer height */
+}
+.blurb{
+  height:-webkit-fill-available;
   background-image: url('/assets/images/background.jpg');
   background-position:right bottom;
   background-size: 100% 100%;
