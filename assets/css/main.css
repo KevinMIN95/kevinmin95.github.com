@@ -34,11 +34,6 @@ p {
     line-height: 1.4em;
     color: #333;
 }
-.blurb{
-  background-image: url('/assets/images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%
-}
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -53,6 +48,12 @@ p {
 }
 #container {
   padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 3rem;    /* Footer height */
+  background-image: url('/assets/images/background.jpg');
+  background-position:right bottom;
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  background-origin:content-box;
 }
 
 #footer {
