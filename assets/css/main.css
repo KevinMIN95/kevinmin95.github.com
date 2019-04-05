@@ -58,6 +58,22 @@ p {
   background-repeat:no-repeat;
   background-origin:content-box;
 }
+.cv{
+  height:-webkit-fill-available;
+  background-image: url('/assets/images/spiderbackground.jpg');
+  background-position:right bottom;
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  background-origin:content-box;
+}
+.blog{
+  height:-webkit-fill-available;
+  background-image: url('/assets/images/deadpool.jpg');
+  background-position:right bottom;
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  background-origin:content-box;
+}
 
 #footer {
   position: absolute;
@@ -67,7 +83,9 @@ p {
   border-top: 1px solid #d5d5d5;
   font-size: .8em;
 }
-
+ul.catg_index{
+  font-size: 1.5em
+}
 ul.posts {
     margin: 20px auto 40px;
     font-size: 1.5em;
