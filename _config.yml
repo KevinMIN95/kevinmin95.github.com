@@ -6,7 +6,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-permalink: /blog/blog/:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title
 collections:
   authors:
     output : true
