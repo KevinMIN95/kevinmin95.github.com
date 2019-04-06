@@ -27,12 +27,13 @@ h1 {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 h2{
-  font-size: :2em;
+  font-size: 2em;
 }
 p {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
+    font-family: 'Raleway', sans-serif;
 }
 #page-container {
   position: relative;
@@ -57,6 +58,14 @@ p {
   background-size: 100% 100%;
   background-repeat:no-repeat;
   background-origin:content-box;
+}
+.blurb p{
+  width: 55%;
+  text-align: justify;
+  font-size: 1.5em;
+  line-height: 1.4em;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
 }
 .cv{
   height:-webkit-fill-available;
