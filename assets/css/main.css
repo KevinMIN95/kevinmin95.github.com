@@ -30,12 +30,7 @@ h1 {
 h2{
   font-size: 2em;
 }
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-    font-family: 'Raleway', sans-serif;
-}
+
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -54,6 +49,7 @@ p {
 }
 .blurb{
   height:-webkit-fill-available;
+  overflow: hidden;
   background-image: url('/assets/images/background.jpg');
   background-position:right bottom;
   background-size: 100% 100%;
@@ -76,6 +72,12 @@ p {
   background-repeat:no-repeat;
   background-origin:content-box;
 }
+.cv p{
+  font-size: 1.3em;
+  line-height: 1.5em;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+}
 .blog{
   height:-webkit-fill-available;
   background-image: url('/assets/images/deadpool.jpg');
@@ -83,6 +85,27 @@ p {
   background-size: 100% 100%;
   background-repeat:no-repeat;
   background-origin:content-box;
+}
+.blog_post{
+    position: relative;
+    width: 60%;
+    height: inherit;
+}
+.posts {
+    margin: 20px auto 40px;
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+.posts li {
+    list-style: none;
+    margin-bottom: 1em;
+}
+.pagination{
+  font-size: 1.2em;
+  text-align: center;
+  position: absolute;
+  top: 90%;
+  left: 40%;
 }
 
 #footer {
@@ -92,15 +115,4 @@ p {
   height: 2.5rem;            /* Footer height */
   border-top: 1px solid #d5d5d5;
   font-size: .8em;
-}
-ul.catg_index{
-  font-size: 1.5em
-}
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
-}
-
-ul.posts li {
-    list-style: none;
 }
