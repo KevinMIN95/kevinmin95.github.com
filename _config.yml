@@ -6,6 +6,16 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+gems:
+    - jekyll-paginate-v2
+
+pagination:
+    enabled: true
+    per_page: 2
+    limit: 0
+    sort_field: "date"
+    sort_reverse: true
+
 permalink: /blog/:year/:month/:day/:title
 collections:
   authors:
