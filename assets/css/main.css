@@ -44,7 +44,6 @@ h2{
   text-decoration: none;
 }
 #container {
-  height:-webkit-fill-available;
   padding-bottom: 3rem;    /* Footer height */
 }
 .blurb{
