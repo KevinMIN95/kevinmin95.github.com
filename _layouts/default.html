@@ -7,19 +7,7 @@
     <!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-		<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      processEscapes: true},
-    "HTML-CSS": { fonts: ["TeX"] } });
-		</script>
-		<script type="text/javascript" src="path-to-MathJax/MathJax.js">
-		</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_SVG"></script>
 		{% feed_meta %}
     {% seo %}
 	</head>
