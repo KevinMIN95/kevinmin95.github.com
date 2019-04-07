@@ -1,6 +1,7 @@
 name: Kevin Min
 markdown: kramdown
 url: "https://kevinmin95.github.io"
+absolute_permalink: /blog/:year/:month/:day/:title
 plugins:
   - jekyll-sitemap
   - jekyll-feed
@@ -16,7 +17,7 @@ pagination:
     sort_field: "date"
     sort_reverse: true
 
-permalink: /blog/:year/:month/:day/:title
+
 collections:
   authors:
     output : true
