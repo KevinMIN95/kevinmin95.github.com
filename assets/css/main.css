@@ -99,6 +99,10 @@ h2{
     list-style: none;
     margin-bottom: 1em;
 }
+.posts a{
+  text-decoration: none;
+  color: #4accec;
+}
 .pagination{
   font-size: 1.2em;
   text-align: center;
