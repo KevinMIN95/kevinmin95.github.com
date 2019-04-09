@@ -19,7 +19,7 @@ $$ A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
 
 그림으로 보면 다음과 같다.
 
-{% include image.html url='{{ "/assets/images/post/post_2_1.png"| relative_url }}' description='A functional dependency on two tuples' alt='Functional Dependencies' %}
+{% include image.html url={{ "/assets/images/post/post_2_1.png"| relative_url }} description='A functional dependency on two tuples' alt='Functional Dependencies' %}
 
 ### Rules about Functional Dependencies
 지금부터는 FD의 몇가지 특성들에 대해 살펴보자.
@@ -54,7 +54,7 @@ Relation R 에 대해 attributes의 집합 $\{A_1,A_2,...,A_n\}$ 이 key가 될 
 ## Closure of attributes
 다음은 Closure 에 대해 알아보자. A set of FD's S 가 있고 attributes 집합 $\{A_1,A_2,...,A_n \}$ 이 있을 때, S에 대한 $\{A_1,A_2,...,A_n\}$ 의 closure은 S 하에서 $A_1,A_2,...,A_n \rightarrow  B$ 을 만족하는 모든 $B$의 집합이다. 그리고 $\{A_1,A_2,...,A_n\}+$ 로 표기한다.
 
-{% include image.html url='{{ "/assets/images/post/post_2_2.png"| relative_url }}' description='the closure of a set of attributes' alt='Closure of attributes' %}
+{% include image.html url={{ "/assets/images/post/post_2_2.png"| relative_url }} description='the closure of a set of attributes' alt='Closure of attributes' %}
 
 즉, 어떤 attributes 집단 $\{A_1,A_2,...,A_n \}$의 closure 는 $\{A_1,A_2,...,A_n \}$ 가 functionally determine 할 수 있는 모든 attributes을 의미한다. 따라서 만약 어떤 attributes 집단의 closure가 relation R의 전체 attributes이면 그 집단은 Superkey 이다.  
 
@@ -66,7 +66,7 @@ Relation R 에 대해 attributes의 집합 $\{A_1,A_2,...,A_n\}$ 이 key가 될 
 
 다음은 minimal basis을 구하는 예시이다.
 
-![hidden variable Z](/assets/images/post/post_2_3.png){: width="200px"}   
+![hidden variable Z](/assets/images/post/post_2_3.png){: width="400px"}   
 
 
 이번 글에서는 적절한 relational database schema design을 하기 위해 필요한 여러 개념들을 정리해 보았다. 다음 글 에서는 적절하지 못한 design이 야기할 수 있는 여러 anomolies 와 decompsition을 위한 Boyce-Codd normal form, 3NF, 4NF 등의 개념에 대해 정리해 볼 것이다.     
