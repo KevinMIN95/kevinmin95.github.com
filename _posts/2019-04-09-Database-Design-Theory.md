@@ -19,11 +19,26 @@ $$ A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
 
 그림으로 보면 다음과 같다.
 
-{% include image.html url='{{"/assets/img/post_2_1.png"| relative_url}}' description='A functional dependency on two tuples' alt='Functional Dependencies' %}
+{% include image.html url='{{ "/assets/images/post/post_2_1.png"| relative_url }}' description='A functional dependency on two tuples' alt='Functional Dependencies' %}
 
 ### Rules about Functional Dependencies
 지금부터는 FD의 몇가지 특성들에 대해 살펴보자.
-우선 두개의 sets of FD's S 와 T 가 주워졌을 때, 
+
+우선 두개의 sets of FD's S 와 T 가 주워졌을 때, S 와 T를 만족하는 각각의 relations 들이 동일하다면, S와 T는 *equivalent*하다. 또한 만약 T를 만족하는 모든  relations 들이 S을 만족한다면 *S follows from T* 이다. 따라서 S와 T가 equivalent할 필요충분 조건은 S follows from T 이고 T follows from S 일 때다.
+
+The Splitting/Combining Rule
+
+$$ A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
+
+이면 오른쪽 항을 하나씩 나눌 수 있다.
+
+$$ A_1,A_2,...,A_n \rightarrow  B_1, A_1,A_2,...,A_n \rightarrow B_2,...,A_1,A_2,...,A_n \rightarrow B_m $$
+
+하지만 왼쪽 항에 대해서는 나눌 수 없다.
+
+
+
+
 
 
 ## Key and Superkeys
