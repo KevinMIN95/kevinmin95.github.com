@@ -24,11 +24,12 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 3.3em;
+    font-family:'Oswald', sans-serif;
 }
 h2{
   font-size: 2em;
+  font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 #page-container {
@@ -44,6 +45,9 @@ h2{
   text-decoration: none;
 }
 #container {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 3rem;    /* Footer height */
 }
 .blurb{
