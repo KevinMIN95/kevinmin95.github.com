@@ -39,8 +39,7 @@ $$ A_1,A_2,...,A_n \rightarrow  B_1, A_1,A_2,...,A_n \rightarrow B_2,...,A_1,A_2
 물론 반대도 가능하다. 하지만 주의할 점은 왼쪽 항에 대해서는 적용할 수 없다.
 
 3. Trivial Functional Dependencies
-
-어떤 FD가 어떤 constraints 들이 있는지에 관계없이 모든 relation들에 대해 만족한다면 우리는 그 FD가 trivial 하다고 한다. 다른 말로 $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때,
+어떤 FD가 어떤 constraints 들이 있는지에 관계없이 모든 relation들에 대해 만족한다면 우리는 그 FD가 trivial 하다고 한다. 대표적으로 경우로 $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때, 또는 $\{B_1,B_2,...,B_m\} \cup \{A_1,A_2,...,A_n\} = attrs(R)$ 일 때,
 $$\text{FD  } A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
 는 trivial 하다.
 
@@ -69,5 +68,48 @@ Relation R 에 대해 attributes의 집합 $\{A_1,A_2,...,A_n\}$ 이 key가 될 
 
 !["minimal basis example"](/assets/images/post/post_2_3.png){: width="500px"}   
 
+## Multivalued Dependencies
+
+앞에서 attributes 집단 $\{A_1,A_2,...,A_n \}$이 일치할때, 다른 attributes 집단 $\{B_1,B_2,...,B_n \}$이 일차하면 그 관계를 FD($A_1,A_2,...,A_n \rightarrow B_1,B_2,...,B_)라고 하였다. 이번에는 다른 관계인 MVD(Multivalued Dependencies)에 대해 알아보자. Relation R에 대해 한 집단의 attributes들이 일치할 때, 다른 특정 attributes의 집단이 나머지 집단들과 독립적 일때를 MVD라고 한다. 다시 말해 MVD
+
+$$ A_1,A_2,...,A_n ∖twoheadrightarrow B_1,B_2,...,B_n $$
+
+은 다음 일때 성립한다. R의 2개의 tuple t, u에서 attributes의 집단 $\{A_1,A_2,...,A_n \}$ 이 일치할때 다음과 같은 v를 찾을 수 있다.
+
+1. $\{A_1,A_2,...,A_n \}$에 대해서 일치한다.
+2. t 와 $\{B_1,B_2,...,B_n \}$에 대해서 일치한다.
+3. u 와 $A's$,$B's$을 제외한 다른 모든 attributes에 대해서 일치한다.
+
+!["MVD"](/assets/images/post/post_2_4.png){: width="400px"}  
+
+더 쉽게 정리하면 MVD $ A_1,A_2,...,A_n ∖twoheadrightarrow B_1,B_2,...,B_n $ 가 성립하면 $A's$의 값이 일치할 때, $B's$ 값들을 서로 교환해도 모든 tuple 들이 R에 존재해야한다. 따라서 그러기 위해서는 위의 그림에서 $B's$ 와 $C's$의 모든 조합이 존재해야 한다는 것과 동일하다($(b_1,c_1),(b_1,c_2),(b_2,c_1),(b_2,c_2)$)
+
+### Rules about Multivalued Dependencies
+
+FD와 마찬가지로 MVD도 여러가지 성질을 가지고 있다.
+1. Trivial MVD's
+
+MVD
+
+$$ A_1,A_2,...,A_n ∖twoheadrightarrow B_1,B_2,...,B_n $$
+
+에서 FD와 마찬가지로 어떤 constraints에 관계없이 성립하는 경우 trivial MVD라고 한다. $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때, 또는 $\{B_1,B_2,...,B_m\} \cup \{A_1,A_2,...,A_n\} = attrs(R)$ 일 때 두 경우가 있다.
+
+2. FD promotion
+
+모든 FD는 MVD 이다.
+
+3. Transitive Rule
+
+만약 $A \twoheadrightarrow B$ 이고 $B \twoheadrightarrow C$ 이면, $A \twoheadrightarrow B$ 이다.
+참고로 MVD는 splitting rule은 성립하지 않는다.(Combining rule 은 성립한다.)
+
+4. Complementation Rule
+
+만약 $A \twoheadrightarrow B$ 이면, $A \twoheadrightarrow attr(R)-A-B$ 이다.
+
+## 끝으로
 
 이번 글에서는 적절한 relational database schema design을 하기 위해 필요한 여러 개념들을 정리해 보았다. 다음 글 에서는 적절하지 못한 design이 야기할 수 있는 여러 anomolies 와 decompsition을 위한 Boyce-Codd normal form, 3NF, 4NF 등의 개념에 대해 정리해 볼 것이다.     
+
+계속해서... [[Database]Design Theory(2)](/blog/2019/04/12/Database-Design-Theory(2)) 

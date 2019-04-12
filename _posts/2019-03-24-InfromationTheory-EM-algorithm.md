@@ -23,7 +23,7 @@ $$ \hat{\theta}_{MLE} = arg \max_{\theta} l(\theta) = arg \max_{\theta} p(x|\the
 ## Probabilistic model having latent variable
 Latent variable($Z$)은 우리가 관측한 random variable($X$ : incomplete data)이 아닌, 우리가 임의로 설정한 hidden variable을 의미한다.
 
-![hidden variable Z](/assets/images/post/post1_1.png){: width="300px"}
+![hidden variable Z](/assets/images/post/post_1_1.png){: width="300px"}
 
 위의 model에서 $X$의 maximum likelihood 을 구하고 싶다면 어떻게 해야할까? $X$의 maximum likelihood 는 다음과 같이 표현할 수 있다. =
 
