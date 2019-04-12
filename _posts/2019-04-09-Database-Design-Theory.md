@@ -25,23 +25,15 @@ $$ A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
 ### Rules about Functional Dependencies
 지금부터는 FD의 몇가지 특성들에 대해 살펴보자.
 
-1. Equivalent FDs
+1. Equivalent FDs<br>우선 두개의 sets of FD's S 와 T 가 주워졌을 때, S 와 T를 만족하는 각각의 relations 들이 동일하다면, S와 T는 *equivalent*하다. 또한 만약 T를 만족하는 모든  relations 들이 S을 만족한다면 *S follows from T* 이다. 따라서 S와 T가 equivalent할 필요충분 조건은 S follows from T 이고 T follows from S 일 때다.
 
-우선 두개의 sets of FD's S 와 T 가 주워졌을 때, S 와 T를 만족하는 각각의 relations 들이 동일하다면, S와 T는 *equivalent*하다. 또한 만약 T를 만족하는 모든  relations 들이 S을 만족한다면 *S follows from T* 이다. 따라서 S와 T가 equivalent할 필요충분 조건은 S follows from T 이고 T follows from S 일 때다.
+2. The Splitting/Combining Rule<br>$$ A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$ 이면 오른쪽 항을 하나씩 나눌 수 있다.<br> $$ A_1,A_2,...,A_n \rightarrow  B_1, A_1,A_2,...,A_n \rightarrow B_2,...,A_1,A_2,...,A_n \rightarrow B_m $$<br>물론 반대도 가능하다. 하지만 주의할 점은 왼쪽 항에 대해서는 적용할 수 없다.
 
-2. The Splitting/Combining Rule
+3. Trivial Functional Dependencies<br>어떤 FD가 어떤 constraints 들이 있는지에 관계없이 모든 relation들에 대해 만족한다면 우리는 그 FD가 trivial 하다고 한다. 대표적으로 경우로 $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때, 또는 $\{B_1,B_2,...,B_m\} \cup \{A_1,A_2,...,A_n\} = attrs(R)$ 일 때, 다음 FD는 trivial 하다.
 
-$$ A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
-
-이면 오른쪽 항을 하나씩 나눌 수 있다.
-
-$$ A_1,A_2,...,A_n \rightarrow  B_1, A_1,A_2,...,A_n \rightarrow B_2,...,A_1,A_2,...,A_n \rightarrow B_m $$
-물론 반대도 가능하다. 하지만 주의할 점은 왼쪽 항에 대해서는 적용할 수 없다.
-
-3. Trivial Functional Dependencies
-어떤 FD가 어떤 constraints 들이 있는지에 관계없이 모든 relation들에 대해 만족한다면 우리는 그 FD가 trivial 하다고 한다. 대표적으로 경우로 $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때, 또는 $\{B_1,B_2,...,B_m\} \cup \{A_1,A_2,...,A_n\} = attrs(R)$ 일 때,
 $$\text{FD  } A_1,A_2,...,A_n \rightarrow  B_1,B_2,...,B_m $$
-는 trivial 하다.
+
+
 
 ## Key and Superkeys
 Relation R 에 대해 attributes의 집합 $\{A_1,A_2,...,A_n\}$ 이 key가 될 조건은 다음과 같다.
@@ -87,29 +79,17 @@ $$ A_1,A_2,...,A_n ∖twoheadrightarrow B_1,B_2,...,B_n $$
 ### Rules about Multivalued Dependencies
 
 FD와 마찬가지로 MVD도 여러가지 성질을 가지고 있다.
-1. Trivial MVD's
+1. Trivial MVD's<br>MVD<br>$$ A_1,A_2,...,A_n ∖twoheadrightarrow B_1,B_2,...,B_n $$<br>에서 FD와 마찬가지로 어떤 constraints에 관계없이 성립하는 경우 trivial MVD라고 한다. $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때, 또는 $\{B_1,B_2,...,B_m\} \cup \{A_1,A_2,...,A_n\} = attrs(R)$ 일 때 두 경우가 있다.
 
-MVD
+2. FD promotion<br>모든 FD는 MVD 이다.
 
-$$ A_1,A_2,...,A_n ∖twoheadrightarrow B_1,B_2,...,B_n $$
-
-에서 FD와 마찬가지로 어떤 constraints에 관계없이 성립하는 경우 trivial MVD라고 한다. $\{B_1,B_2,...,B_m\} \subseteq \{A_1,A_2,...,A_n\}$ 일 때, 또는 $\{B_1,B_2,...,B_m\} \cup \{A_1,A_2,...,A_n\} = attrs(R)$ 일 때 두 경우가 있다.
-
-2. FD promotion
-
-모든 FD는 MVD 이다.
-
-3. Transitive Rule
-
-만약 $A \twoheadrightarrow B$ 이고 $B \twoheadrightarrow C$ 이면, $A \twoheadrightarrow B$ 이다.
+3. Transitive Rule<br>만약 $A \twoheadrightarrow B$ 이고 $B \twoheadrightarrow C$ 이면, $A \twoheadrightarrow B$ 이다.
 참고로 MVD는 splitting rule은 성립하지 않는다.(Combining rule 은 성립한다.)
 
-4. Complementation Rule
-
-만약 $A \twoheadrightarrow B$ 이면, $A \twoheadrightarrow attr(R)-A-B$ 이다.
+4. Complementation Rule<br>만약 $A \twoheadrightarrow B$ 이면, $A \twoheadrightarrow attr(R)-A-B$ 이다.
 
 ## 끝으로
 
 이번 글에서는 적절한 relational database schema design을 하기 위해 필요한 여러 개념들을 정리해 보았다. 다음 글 에서는 적절하지 못한 design이 야기할 수 있는 여러 anomolies 와 decompsition을 위한 Boyce-Codd normal form, 3NF, 4NF 등의 개념에 대해 정리해 볼 것이다.     
 
-계속해서... [[Database]Design Theory(2)](/blog/2019/04/12/Database-Design-Theory(2)) 
+계속해서... [[Database]Design Theory(2)](/blog/2019/04/12/Database-Design-Theory(2))
