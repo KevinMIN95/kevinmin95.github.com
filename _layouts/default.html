@@ -1,38 +1,13 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>{{ page.title }}</title>
-		<meta name="author" content="Kevin Min">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-		{% if page.use_math %}
-  	{% include mathjax_support.html %}
-		{% endif %}
-		{% feed_meta %}
-    {% seo %}
-	</head>
-	<body>
-		<header role="banner" id="header">
-			<hgroup>
-				<h1>
-					<a class="head" href="/">Kevin's Private Studio</a>
-				</h1>
-			</hgroup>
-		</header>
-		<div id="page-container">
-			{% include navigation.html %}
-			<div id="container">
-      {{ content }}
-			</div><!-- /.container -->
-			<footer id="footer">
-				<ul>
-        		<li><a href="mailto:alsehdcks95@kaist.ac.kr">email</a></li>
-        		<li><a href="https://github.com/KevinMIN95/kevinmin95.github.com">github.com/kevinmin95</a></li>
-				</ul>
-			</footer>
-		</div>
-	</body>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/konpa/devicon@df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<html lang="en">
+  {% include head.html %}
+  <body>
+      {% include header.html %}
+      <section id="about">
+        {% include about.html %}
+      </section>
+        {{ content }}
+      {% include footer.html %}
+  </body>
 </html>

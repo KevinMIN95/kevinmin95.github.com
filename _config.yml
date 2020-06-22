@@ -1,18 +1,21 @@
-name: Kevin Min
-markdown: kramdown
+# Site settings
+title: Dongchan Min
+description: Dongchan Min's Private Blog
 url: "https://kevinmin95.github.io"
-permalink: /blog/:year/:month/:day/:title
-plugins:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-paginate
+# baseurl: "" # the subpath of your site, e.g. /blog
+# url: "localhost:3000" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 
-paginate: 10
-paginate_path: "/blog/page:num/"
+# User settings
+username: Kevin Min
+user_description: I\'m a nomad Software Engineer, always searching for the next challenge; no task is too scary nor too difficult. Lately I have been immersed in the <b>crypto-world</b> working for Radix, a London based startup trying to create the next massive scalable DLT. I'm one of the two guys behind all the JS related stuff. Visit my blog here <a href="https://mauriciourraco.com" target="_blank">https://mauriciourraco.com</a>
+user_title: DeepLearning Researcher
+email: alsehdcks95@kaist.ac.kr
+# twitter_username: lorem_ipsum
+# github_username:  lorem_ipsum
+# gplus_username:  lorem_ipsum
 
+# Google-analytics
+google-analytics:
+  id: ""
 
-
-collections:
-  authors:
-    output : true
+exclude: ['package.json', 'src' , 'node_modules']
